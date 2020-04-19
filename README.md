@@ -69,6 +69,8 @@ All of these routes should start with `/api/` as we are creating an API. Make th
    - requested url
    - time of the request
 
+## Advanced
+
 9. Create an endpoint which responds with an array of all the animals. Allow it to accept the following queries
    - `is_grumpy` - user can filter pets by temperament
    - `sort_by` - user can choose to order the pets by:
@@ -78,3 +80,4 @@ All of these routes should start with `/api/` as we are creating an API. Make th
    - `order` - can accept `asc` or `desc` (defaults to `asc` when the query isn't given.)
    - `max_age` - user can choose to only bring pets younger than passed query
    - `min_age` - user can choose to only bring pets older than passed query
+   - `search` - user can pass a searchTerm that will filter pets to only include those who have the searchTerm in *any* of their properties
