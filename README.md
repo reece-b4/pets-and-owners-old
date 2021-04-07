@@ -57,6 +57,8 @@ All of these routes should start with `/api/` as we are creating an API. Make th
    - delete a pet
    - delete an owner (and therefore any of their pets)
 
+## Advanced Tasks
+
 5. Read about [Error Handling](http://expressjs.com/en/guide/error-handling.html).
 
 6. Update error handing in routes to use express error handling.
