@@ -71,7 +71,7 @@ All of these routes should start with `/api/` as we are creating an API. Make th
    - requested url
    - time of the request
 
-## Advanced
+## Super Advanced Tasks
 
 9. Create an endpoint which responds with an array of all the animals. Allow it to accept the following queries
    - `is_grumpy` - user can filter pets by temperament
