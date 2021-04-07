@@ -4,7 +4,7 @@
 
 ### Tools
 
-1. [Insomnia](https://insomnia.rest/download/) to test your requests
+1. [Insomnia](https://insomnia.rest/download/) to preview your requests
 
 ### Objectives
 
