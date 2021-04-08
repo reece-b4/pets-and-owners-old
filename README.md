@@ -34,47 +34,48 @@ Create the routes (think about structuring them in the relevant way). For each r
 
 All of these routes should start with `/api/` as we are creating an API. Make them restful!
 
-1. GET:
+### Day 1 - GET endpoints to implement:
 
-   - all owners
-   - an owner using their id
-   - all pets belonging to an owner
-   - a single pet using their id
+1. GET: all owners `/owners`
+2. GET: an owner using their id `/owners/:id`
+3. GET: all pets belonging to an owner `/owners/:id/pets`
+4. GET: all pets `/pets` (this endpoint should accept a query of `is_grumpy` so that users can filter pets by temperament)
+5. GET: a per using their id `/pet/:id`
 
-2. PATCH (don't forget to use `express.json()` to access the request body!):
+### Day 2 - PATCH, POST & DELETE endpoints to implement:
 
-   - ability to update owners name and age /owners/:id
+_don't forget to use `express.json()` to access the request body! & think about what the endpoint for each of the below should be_
 
-3. POST (don't forget to use `express.json()` to access the request body!):
+6. PATCH: update an owners name and age
 
-   - add an owner
-     - Must be same format (contain the same information), you should check the other owner files for this.
-     - Use a timestamp for the id, affixed with the relevant letter, o or p
-   - add a pet to an owner (owner must exist) - /owners/:id/pets
+7. POST: add an owner
+   - Must be the same format as the existing data (contain the same information), you should check the other owner files for this.
+   - Use a timestamp for the id ([Date.now()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/now) might be useful), affixed with the relevant letter, "o" to avoid overwriting an existing file
 
-4. DELETE:
+8. POST: add a pet to an owner (owner must exist) - /owners/:id/pets
+   - Must be the same format as the existing data (contain the same information), you should check the other owner files for this.
+   - Use a timestamp for the id ([Date.now()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/now) might be useful), affixed with the relevant letter, "o" to avoid overwriting an existing file
 
-   - delete a pet
-   - delete an owner (and therefore any of their pets)
+9. DELETE: remove a pet from the data
+
+10. DELETE: remove an owner (and therefore, also remove any of their pets)
 
 ## Advanced Tasks
 
-5. Read about [Error Handling](http://expressjs.com/en/guide/error-handling.html).
+Read about [Error Handling](http://expressjs.com/en/guide/error-handling.html).
 
-6. Update error handing in routes to use express error handling.
+11. Update error handing in routes to use express error handling.
 
-7. Read about [Application level middleware](http://expressjs.com/en/guide/using-middleware.html#middleware.application).
+12. Read about [Application level middleware](http://expressjs.com/en/guide/using-middleware.html#middleware.application).
 
-8. Create log.txt file in the root directory and a logger middleware function that writes the following to the bottom of the log file:
-
+13. Create log.txt file in the root directory and a logger middleware function that writes the following to the bottom of the log file:
    - request method
    - requested url
    - time of the request
 
 ## Super Advanced Tasks
 
-9. Create an endpoint which responds with an array of all the animals. Allow it to accept the following queries
-   - `is_grumpy` - user can filter pets by temperament
+14. Update the all pets endpoint (task 4) and allow it to accept the following queries
    - `sort_by` - user can choose to order the pets by:
      - `id` - should default to this when no query is given.
      - `age`
