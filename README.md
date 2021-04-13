@@ -28,9 +28,11 @@ Here's a nice article to help with your understanding of this pattern:
 
 Now you will need to create a new express server that will implement the following:
 
-In this sprint, we are going to create a fully functioning server that can handle the following requests: - GET - POST - PATCH - DELETE
-
-Create the routes (think about structuring them in the relevant way). For each route, start implementing all of the logic in accessing the files etc in the relevant model method. Then in your controller, require in the relevant model and use it.
+In this sprint, we are going to create a fully functioning server that can handle the following requests: 
+- GET
+- POST
+- PATCH
+- DELETE
 
 All of these routes should start with `/api/` as we are creating an API. Make them restful!
 
