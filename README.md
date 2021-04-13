@@ -1,7 +1,10 @@
 # Pets and Owners
 
 [Express.js](http://expressjs.com/) is a web application framework for Node.js. It is designed for building web applications and APIs.
+
 [nodemon](https://www.npmjs.com/package/nodemon) is a tool that helps develop node.js based applications by automatically restarting the node application when file changes in the directory are detected.
+
+Remember to `npm init` before installing these two packages, and to setup your `.gitignore` file so that you don't commit your `node_modules`!
 
 ### Tools
 
