@@ -1,6 +1,7 @@
 # Pets and Owners
 
 [Express.js](http://expressjs.com/) is a web application framework for Node.js. It is designed for building web applications and APIs.
+[nodemon](https://www.npmjs.com/package/nodemon) is a tool that helps develop node.js based applications by automatically restarting the node application when file changes in the directory are detected.
 
 ### Tools
 
@@ -8,10 +9,10 @@
 
 ### Objectives
 
-1. Learn how to get a simple web server up and running using express.
-2. Learn handling simple GET requests on your server.
+1. Learn how to get a simple web server up and running using express
+2. Learn handling simple GET requests on your server
 3. Learn to read queries from the request your sever receives
-4. Build your own static web page server.
+4. Learn to use the body of POST/PATCH requests
 
 ## Intro
 
@@ -35,6 +36,8 @@ In this sprint, we are going to create a fully functioning server that can handl
 - DELETE
 
 All of these routes should start with `/api/` as we are creating an API. Make them restful!
+
+Remember to use `nodemon` so that you do not have to keep manually restarting your express server!
 
 ### Day 1 - GET endpoints to implement:
 
