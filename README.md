@@ -44,7 +44,7 @@ Remember to use `nodemon` so that you do not have to keep manually restarting yo
 
 ### Day 1 - GET endpoints to implement:
 
-1. GET: all owners `/owners` (hint: you will need to use [fs.readdir](https://www.geeksforgeeks.org/node-js-fs-readdir-method/) to read all of the files in the owners folder)
+1. GET: all owners `/owners` (_hint: you will need to use [fs.readdir](https://www.geeksforgeeks.org/node-js-fs-readdir-method/) to read all of the files in the owners folder_)
 2. GET: an owner using their id `/owners/:id`
 3. GET: all pets belonging to an owner `/owners/:id/pets`
 4. GET: all pets `/pets` (this endpoint should accept a query of `is_grumpy` so that users can filter pets by temperament)
