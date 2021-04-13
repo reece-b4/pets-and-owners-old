@@ -48,7 +48,7 @@ Remember to use `nodemon` so that you do not have to keep manually restarting yo
 2. GET: an owner using their id `/owners/:id`
 3. GET: all pets belonging to an owner `/owners/:id/pets`
 4. GET: all pets `/pets` (this endpoint should accept a query of `is_grumpy` so that users can filter pets by temperament)
-5. GET: a per using their id `/pet/:id`
+5. GET: a pet using their id `/pet/:id`
 
 ### Day 2 - PATCH, POST & DELETE endpoints to implement:
 
