@@ -5,5 +5,5 @@
   "favouriteFood": "Bacon",
   "owner": "o2",
   "age": 11,
-  "grumpy": true
+  "temperament": "aggressive"
 }

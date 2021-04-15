@@ -5,5 +5,5 @@
   "favouriteFood": "Pawpaw Fruit",
   "owner": "o4",
   "age": 15,
-  "grumpy": true
+  "temperament": "grumpy"
 }

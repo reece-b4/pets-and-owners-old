@@ -5,5 +5,5 @@
   "favouriteFood": "Digestive Biscuits",
   "owner": "o1",
   "age": 10,
-  "grumpy": true
+  "temperament": "aggressive"
 }

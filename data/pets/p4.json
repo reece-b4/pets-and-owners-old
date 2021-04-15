@@ -5,5 +5,5 @@
   "favouriteFood": "Fish and Chips",
   "owner": "o1",
   "age": 4,
-  "grumpy": true
+  "temperament": "aggressive"
 }

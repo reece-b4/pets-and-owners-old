@@ -32,7 +32,8 @@ Here's a nice article to help with your understanding of this pattern:
 
 Now you will need to create a new express server that will implement the following:
 
-In this sprint, we are going to create a fully functioning server that can handle the following requests: 
+In this sprint, we are going to create a fully functioning server that can handle the following requests:
+
 - GET
 - POST
 - PATCH
@@ -47,7 +48,7 @@ Remember to use `nodemon` so that you do not have to keep manually restarting yo
 1. GET: an owner using their id `/owners/:id`
 2. GET: all owners `/owners` (_hint: you will need to use [fs.readdir](https://www.geeksforgeeks.org/node-js-fs-readdir-method/) to read all of the files in the owners folder_)
 3. GET: all pets belonging to an owner `/owners/:id/pets`
-4. GET: all pets `/pets` (this endpoint should accept a query of `is_grumpy` so that users can filter pets by temperament)
+4. GET: all pets `/pets` (this endpoint should accept a query of `temperament` so that users can filter pets by their temperament, e.g. `GET /api/pets?temperament=grumpy`)
 5. GET: a pet using their id `/pet/:id`
 
 ### Day 2 - PATCH, POST & DELETE endpoints to implement:
@@ -57,10 +58,12 @@ _don't forget to use `express.json()` to access the request body! & think about 
 6. PATCH: update an owners name and age
 
 7. POST: add an owner
+
    - Must be the same format as the existing data (contain the same information), you should check the other owner files for this.
    - Use a timestamp for the id ([Date.now()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/now) might be useful), affixed with the relevant letter, "o" to avoid overwriting an existing file
 
 8. POST: add a pet to an owner (owner must exist) - /owners/:id/pets
+
    - Must be the same format as the existing data (contain the same information), you should check the other owner files for this.
    - Use a timestamp for the id ([Date.now()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/now) might be useful), affixed with the relevant letter, "o" to avoid overwriting an existing file
 
@@ -77,18 +80,20 @@ Read about [Error Handling](http://expressjs.com/en/guide/error-handling.html).
 12. Read about [Application level middleware](http://expressjs.com/en/guide/using-middleware.html#middleware.application).
 
 13. Create log.txt file in the root directory and a logger middleware function that writes the following to the bottom of the log file:
-   - request method
-   - requested url
-   - time of the request
+
+- request method
+- requested url
+- time of the request
 
 ## Super Advanced Tasks
 
 14. Update the all pets endpoint (task 4) and allow it to accept the following queries
-   - `sort_by` - user can choose to order the pets by:
-     - `id` - should default to this when no query is given.
-     - `age`
-     - `name`
-   - `order` - can accept `asc` or `desc` (defaults to `asc` when the query isn't given.)
-   - `max_age` - user can choose to only bring pets younger than passed query
-   - `min_age` - user can choose to only bring pets older than passed query
-   - `search` - user can pass a searchTerm that will filter pets to only include those who have the searchTerm in *any* of their properties
+
+- `sort_by` - user can choose to order the pets by:
+  - `id` - should default to this when no query is given.
+  - `age`
+  - `name`
+- `order` - can accept `asc` or `desc` (defaults to `asc` when the query isn't given.)
+- `max_age` - user can choose to only bring pets younger than passed query
+- `min_age` - user can choose to only bring pets older than passed query
+- `search` - user can pass a searchTerm that will filter pets to only include those who have the searchTerm in _any_ of their properties
