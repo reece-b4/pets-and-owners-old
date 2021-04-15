@@ -4,4 +4,4 @@ const {
   fetchOwnerById,
   updateOwner,
   deleteOwnerById,
-} = require('../models/owners.js');
+} = require('../models/owners-m.js');
