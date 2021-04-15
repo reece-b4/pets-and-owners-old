@@ -3,4 +3,4 @@ const {
   fetchPetById,
   fetchPetsByOwnerId,
   deletePetById,
-} = require('../models/pets.js');
+} = require('../models/pets-m.js');
