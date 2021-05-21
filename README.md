@@ -19,14 +19,7 @@ Remember to `npm init` before installing these two packages, and to setup your `
 
 ## Intro
 
-This sprint will help you get used to express as well as recap over the use of the file system module. A common architectural pattern is known as MVC where we split each type of job into three sections:
-
-- _Model_: represents the different data in used by your application and handles the interactions with the database (in this case, we are using files to represent a database).
-- _View_: is in charge of what to render/show to the user and using the data it is passed to create everything needed on the screen. For now, we are unconcerned with this.
-- _Controller_: is like the manager. The controller function is a function that is designed to handle a specific task. It works with the model to handle any of the necessary changes to the data and will then collect up everything needed and will respond using the relevant view or data.
-
-Here's a nice article to help with your understanding of this pattern:
-[MVC Bar analogy](https://medium.freecodecamp.org/model-view-controller-mvc-explained-through-ordering-drinks-at-the-bar-efcba6255053)
+This sprint will help you get used to express as well as recap over the use of the file system module.
 
 ## Tasks
 
