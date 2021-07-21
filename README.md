@@ -38,45 +38,49 @@ Remember to use `nodemon` so that you do not have to keep manually restarting yo
 
 ### Day 1 - GET endpoints to implement:
 
-1. GET: an owner using their id `/owners/:id`
-2. GET: all owners `/owners` (_hint: you will need to use [fs.readdir](https://www.geeksforgeeks.org/node-js-fs-readdir-method/) to read all of the files in the owners folder_)
-3. GET: all pets belonging to an owner `/owners/:id/pets`
-4. GET: all pets `/pets` (this endpoint should accept a query of `temperament` so that users can filter pets by their temperament, e.g. `GET /api/pets?temperament=grumpy`)
-5. GET: a pet using their id `/pets/:id`
+1. GET `/owners/:id` - responds with the relevant owner's data
+   
+2. GET `/owners` - responds with an array containing the data of every owner  (_hint: you will need to use [fs.readdir](https://www.geeksforgeeks.org/node-js-fs-readdir-method/) to read all of the file names in the owners folder_)
+   
+3. GET `/owners/:id/pets` - responds with an array containing the data of all pets belonging to the relevant owner
+   
+4. GET `/pets` - responds with an array containing all of the pets' data. This endpoint should accept a query of `temperament` so that users can filter pets by their temperament, e.g. `GET /api/pets?temperament=grumpy` responds with an array containing all the pets with a `temperament` of `grumpy`
+   
+5. GET `/pets/:id` - responds with the data of the relevant pet
 
 ### Day 2 - PATCH, POST & DELETE endpoints to implement:
 
 _don't forget to use `express.json()` to access the request body! & think about what the endpoint for each of the below should be_
 
-6. PATCH: update an owners name and age
+1. PATCH: update an owners name and age.
 
-7. POST: add an owner
-
-   - Must be the same format as the existing data (contain the same information), you should check the other owner files for this.
-   - Use a timestamp for the id ([Date.now()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/now) might be useful), affixed with the relevant letter, "o" to avoid overwriting an existing file
-
-8. POST: add a pet to an owner (owner must exist) - /owners/:id/pets
+2. POST: add an owner
 
    - Must be the same format as the existing data (contain the same information), you should check the other owner files for this.
    - Use a timestamp for the id ([Date.now()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/now) might be useful), affixed with the relevant letter, "o" to avoid overwriting an existing file
 
-9. DELETE: remove a pet from the data
+3. POST: add a pet to an owner (owner must exist) - /owners/:id/pets
 
-10. DELETE: remove an owner (and therefore, also remove any of their pets)
+   - Must be the same format as the existing data (contain the same information), you should check the other pet files for this.
+   - Use a timestamp for the id ([Date.now()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/now) might be useful), affixed with the relevant letter, "p" to avoid overwriting an existing file
+
+4. DELETE: remove a pet from the data
+
+5.  DELETE: remove an owner (and therefore, also remove any of their pets)
 
 ## Advanced Tasks
 
-Read about [Error Handling](http://expressjs.com/en/guide/error-handling.html).
+11. Read about [Application level middleware](http://expressjs.com/en/guide/using-middleware.html#middleware.application).
 
-11. Update error handing in routes to use express error handling.
-
-12. Read about [Application level middleware](http://expressjs.com/en/guide/using-middleware.html#middleware.application).
-
-13. Create log.txt file in the root directory and a logger middleware function that writes the following to the bottom of the log file:
+12. Create log.txt file in the root directory and a logger middleware function that writes the following to the bottom of the log file:
 
 - request method
 - requested url
 - time of the request
+
+Read about [Error Handling](http://expressjs.com/en/guide/error-handling.html).
+
+1.  Add some error handling to your routes. Think about how the user could make a bad request to your endpoints and respond with an appropriate status code. 
 
 ## Super Advanced Tasks
 
