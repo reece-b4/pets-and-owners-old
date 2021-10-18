@@ -39,34 +39,30 @@ Remember to use `nodemon` so that you do not have to keep manually restarting yo
 ### Day 1 - GET endpoints to implement:
 
 1. GET `/owners/:id` - responds with the relevant owner's data
-   
-2. GET `/owners` - responds with an array containing the data of every owner  (_hint: you will need to use [fs.readdir](https://www.geeksforgeeks.org/node-js-fs-readdir-method/) to read all of the file names in the owners folder_)
-   
+2. GET `/owners` - responds with an array containing the data of every owner (_hint: you will need to use [fs.readdir](https://www.geeksforgeeks.org/node-js-fs-readdir-method/) to read all of the file names in the owners folder_)
 3. GET `/owners/:id/pets` - responds with an array containing the data of all pets belonging to the relevant owner
-   
 4. GET `/pets` - responds with an array containing all of the pets' data. This endpoint should accept a query of `temperament` so that users can filter pets by their temperament, e.g. `GET /api/pets?temperament=grumpy` responds with an array containing all the pets with a `temperament` of `grumpy`
-   
 5. GET `/pets/:id` - responds with the data of the relevant pet
 
 ### Day 2 - PATCH, POST & DELETE endpoints to implement:
 
 _don't forget to use `express.json()` to access the request body! & think about what the endpoint for each of the below should be_
 
-1. PATCH: update an owners name and age.
+6. PATCH: update an owners name and age.
 
-2. POST: add an owner
+7. POST: add an owner
 
    - Must be the same format as the existing data (contain the same information), you should check the other owner files for this.
    - Use a timestamp for the id ([Date.now()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/now) might be useful), affixed with the relevant letter, "o" to avoid overwriting an existing file
 
-3. POST: add a pet to an owner (owner must exist) - /owners/:id/pets
+8. POST: add a pet to an owner (owner must exist) - /owners/:id/pets
 
    - Must be the same format as the existing data (contain the same information), you should check the other pet files for this.
    - Use a timestamp for the id ([Date.now()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/now) might be useful), affixed with the relevant letter, "p" to avoid overwriting an existing file
 
-4. DELETE: remove a pet from the data
+9. DELETE: remove a pet from the data
 
-5.  DELETE: remove an owner (and therefore, also remove any of their pets)
+10. DELETE: remove an owner (and therefore, also remove any of their pets)
 
 ## Advanced Tasks
 
@@ -80,7 +76,7 @@ _don't forget to use `express.json()` to access the request body! & think about 
 
 Read about [Error Handling](http://expressjs.com/en/guide/error-handling.html).
 
-1.  Add some error handling to your routes. Think about how the user could make a bad request to your endpoints and respond with an appropriate status code. 
+13. Add some error handling to your routes. Think about how the user could make a bad request to your endpoints and respond with an appropriate status code.
 
 ## Super Advanced Tasks
 
