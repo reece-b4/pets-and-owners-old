@@ -3,40 +3,27 @@
 const express = require("express");
 const fs = require("fs");
 const app = express();
+const { getOwnerById } = require("./data/controllers/ownerId.controller.js");
+const { getOwners } = require("./data/controllers/owners.controller.js");
+app.get("/api/owners/:id", getOwnerById);
 
-app.get("/api/owners/:id", (req, res) => {
-  const { id } = req.params;
-  fs.readFile(`./data/owners/${id}.json`, "utf8", (err, data) => {
-    if (err) {
-      console.log(err);
-    } else {
-      const owner = JSON.parse(data);
-      res.status(200).send({ owner });
-    }
-  });
-});
+app.get("/api/owners", getOwners);
 
-app.get("/api/owners", (req, res) => {
-  console.log("get request received");
-  fs.readdir("./data/owners", "utf8", (err, dataArray) => {
-    if (err) {
-      console.log(err);
-    } else {
-      const ownersArray = [];
-      dataArray.forEach((filename) => {
-        fs.readFile(`data/owners/${filename}`, "utf8", (err, ownerData) => {
-          if (err) {
-            console.log(err);
-          } else {
-            ownersArray.push(JSON.parse(ownerData));
-            if (ownersArray.length === dataArray.length) {
-                res.status(200).send(ownersArray);
-            }
-          }
-        });
-      });
-    }
-  });
-});
+// app.get("/api/owners/:ownerId/pets", (req, res) => {
+//   const { ownerId } = req.params;
+//   fs.readdir("./data/pets", "utf-8", (err, petsFileNames) => {
+//     if (err) {
+//       console.log(err);
+//     } else {
+//       const petsArray = [];
+//       petsFileNames.forEach((petsData) => {
+//         if (petsData.owner === ownerId) {
+//           petsArray.push(petsData);
+//           res.status(200).send(petsArray);
+//         }
+//       });
+//     }
+//   });
+// });
 
 module.exports = app;
