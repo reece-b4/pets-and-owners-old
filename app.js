@@ -3,11 +3,17 @@
 const express = require("express");
 const fs = require("fs");
 const app = express();
-const { getOwnerById } = require("./data/controllers/ownerId.controller.js");
+const { getOwnerById } = require("./data/controllers/owners.controller.js");
 const { getOwners } = require("./data/controllers/owners.controller.js");
+const {updateOwnerNameAge} = require("./data/controllers/owners.controller.js")
+app.use(express.json());
+
+
 app.get("/api/owners/:id", getOwnerById);
 
 app.get("/api/owners", getOwners);
+
+app.patch("/api/owners/:id", updateOwnerNameAge);
 
 // app.get("/api/owners/:ownerId/pets", (req, res) => {
 //   const { ownerId } = req.params;
